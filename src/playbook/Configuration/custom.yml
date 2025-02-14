@@ -103,3 +103,9 @@ actions:
     data: '0'
     type: REG_DWORD
     builds: [ '>=22000' ]
+
+  - !cmd:
+    command: 'reg import "AtlasDesktop\4. Interface Tweaks\Context Menus\Windows 10\Add Copy path (default).reg"'
+    exeDir: true
+    runas: currentUserElevated
+    builds: [ '<22000' ]

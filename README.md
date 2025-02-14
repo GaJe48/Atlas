@@ -1,4 +1,5 @@
 ## Atlas fork with my preferences
+- Add Copy path by default
 - Disable Defender by default
 - Disable Drivers update from Windows Update by default
 - Disable Notification Suggestions
