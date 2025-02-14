@@ -1,6 +1,7 @@
 ## Atlas fork with my preferences
 - Disable Defender by default
 - Disable Drivers update from Windows Update by default
+- Disable Notification Suggestions
 - Disable Search Indexing by default
 - Disable SuperFetch by default
 - No internet connection required
