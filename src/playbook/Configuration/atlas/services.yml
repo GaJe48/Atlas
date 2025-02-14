@@ -36,7 +36,7 @@ actions:
 
   - !writeStatus: {status: 'Configuring Indexing'}
   - !cmd:
-    command: '"AtlasDesktop\3. General Configuration\Search Indexing\Minimal Search Indexing (default).cmd" /silent'
+    command: '"AtlasDesktop\3. General Configuration\Search Indexing\Disable Search Indexing.cmd" /silent'
     exeDir: true
     wait: true
 

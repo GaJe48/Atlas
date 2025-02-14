@@ -39,7 +39,7 @@ actions:
           if (!$?) { exit 2 }
       }
 
-      Copy-Item -Path 'Themes\*' -Destination """$windir\Resources\Themes""" -Force -Recurse
+  #    Copy-Item -Path 'Themes\*' -Destination """$windir\Resources\Themes""" -Force -Recurse
     weight: 10
     wait: true
     exeDir: true
@@ -71,7 +71,7 @@ actions:
 
   # Set hidden Settings pages
   # Done before everything else as scripts will overwrite it
-  - !task: {path: 'tweaks\qol\set-hidden-settings-pages.yml'}
+  # - !task: {path: 'tweaks\qol\set-hidden-settings-pages.yml'}
 
   # Main tasks
   - !task: {path: 'atlas\start.yml'}
@@ -79,3 +79,20 @@ actions:
   - !task: {path: 'atlas\components.yml'}
   - !task: {path: 'atlas\appx.yml'}
   - !task: {path: 'tweaks.yml'}
+
+  - !cmd:
+    command: '"AtlasDesktop\6. Advanced Configuration\Services\Superfetch\Disable SuperFetch.cmd" /silent'
+    exeDir: true
+    runas: currentUserElevated
+
+  - !cmd:
+    command: 'reg import "AtlasDesktop\2. Drivers\Drivers from Windows Update\Disable Drivers from Windows Update.reg"'
+    exeDir: true
+    runas: currentUserElevated
+
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+    value: 'AppsUseLightTheme'
+    data: '0'
+    type: REG_DWORD
+    builds: [ '<22000' ]

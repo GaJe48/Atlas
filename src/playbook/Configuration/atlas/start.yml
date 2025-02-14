@@ -47,13 +47,13 @@ actions:
 
     # Initial software
     # 7-Zip, Visual C++ Runtimes, DirectX
-  - !writeStatus: {status: 'Installing utilities'}
-  - !powerShell:
-    command: '.\SOFTWARE.ps1'
-    exeDir: true
-    wait: true
-    weight: 150
-    runas: currentUserElevated
+  # - !writeStatus: {status: 'Installing utilities'}
+  # - !powerShell:
+  #  command: '.\SOFTWARE.ps1'
+  #  exeDir: true
+  #  wait: true
+  #  weight: 150
+  #  runas: currentUserElevated
 
     # Browsers
   - !writeStatus: {status: 'Installing Brave', option: 'browser-brave'}

@@ -1,3 +1,39 @@
+## Atlas fork with my preferences
+- Disable Defender by default
+- Disable Drivers update from Windows Update by default
+- Disable Search Indexing by default
+- Disable SuperFetch by default
+- No internet connection required
+- Not change OEM information
+- Not change Taskbar alignment
+- Not change Taskbar pins previously set
+- Not change Windows profile picture
+- Not change Windows Start Menu pins previously set
+- Not create shortcuts
+- Not disable background apps
+- Not disable Check Boxes in Explorer
+- Not hide any Windows Settings page
+- Not install any software
+- Office recent files are still enabled
+- Set theme to Windows (dark) by default
+- Windows Search is not visible in Taskbar
+- Windows Search with search history is still enabled
+
+## Tips
+If you want to use Atlas on an unsupported build (refer to the [Atlas documentation](https://docs.atlasos.net/install-faq/windows-version-support/)), you can manually add a line in `playbook.conf` with your preferred build. Keep in mind that this is just a workaround to bypass the restriction, it does not ensure that Atlas will function properly.
+```
+	<SupportedBuilds>
+		<!-- 22H2 -->
+		<string>19045</string>
+		<string>19044</string>
+		<!-- 24H2 -->
+		<string>26100</string>
+		<string>22631</string>
+	</SupportedBuilds>
+```
+
+---
+
 <h1 align="center">
   <a href="http://atlasos.net" target="_blank"><img src="https://gcore.jsdelivr.net/gh/Atlas-OS/branding@main/banners/banner-v3.png" alt="Atlas" width="800"></a>
 </h1>

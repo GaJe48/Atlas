@@ -16,7 +16,7 @@ actions:
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings'
     value: 'IsDeviceSearchHistoryEnabled'
-    data: '0'
+    data: '1'
     type: REG_DWORD
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings'
@@ -62,5 +62,5 @@ actions:
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search'
     value: 'SearchboxTaskbarMode'
-    data: '1'
+    data: '0'
     type: REG_DWORD

@@ -28,7 +28,7 @@ actions:
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer'
     value: 'NoRecentDocsHistory'
-    data: '1'
+    data: '0'
     type: REG_DWORD
     # Do not display or track items in jump lists from remote locations
   - !registryValue:
