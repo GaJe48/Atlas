@@ -109,3 +109,9 @@ actions:
     exeDir: true
     runas: currentUserElevated
     builds: [ '<22000' ]
+
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Start'
+    value: 'ShowRecentList'
+    data: '0'
+    type: REG_DWORD
